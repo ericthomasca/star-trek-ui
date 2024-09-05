@@ -1,10 +1,16 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
+import { StrictMode } from "react";
+import ReactDOM from "react-dom/client";
+import { PrimeReactProvider } from "primereact/api";
+import App from "./App";
+// tailwind css
+import "./index.css";
+// primeicons css
+import "primeicons/primeicons.css";
 
-createRoot(document.getElementById('root')!).render(
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <StrictMode>
-    <App />
-  </StrictMode>,
-)
+    <PrimeReactProvider>
+      <App />
+    </PrimeReactProvider>
+  </StrictMode>
+);
